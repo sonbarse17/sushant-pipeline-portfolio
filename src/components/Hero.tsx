@@ -132,11 +132,15 @@ const Hero = () => {
                 <div className="absolute inset-2 bg-gradient-to-br from-slate-100 to-white rounded-3xl shadow-inner">
                   <div className="flex items-center justify-center h-full">
                     <div className="text-center space-y-4">
-                      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center overflow-hidden">
+                      <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center overflow-hidden shadow-lg">
                         <img 
-                          src="https://postimage.me/image/IMG-20221026-234532-237.UyuTYo" 
+                          src="https://i.postimg.cc/1XrBGFk7/IMG-20221026-234532-237.jpg" 
                           alt="Sushant Sonbarse"
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.parentElement?.insertAdjacentHTML('afterbegin', '<span class="text-2xl font-bold text-slate-600">SS</span>');
+                          }}
                         />
                       </div>
                       <div>
