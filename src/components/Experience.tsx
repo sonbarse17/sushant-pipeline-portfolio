@@ -1,25 +1,16 @@
-
 import React from 'react';
 import { Building, Calendar, MapPin, CheckCircle, Rocket, Users, TrendingUp } from 'lucide-react';
-
 const Experience = () => {
-  const achievements = [
-    "Designed and implemented CI/CD pipelines reducing deployment time by 60%",
-    "Automated infrastructure provisioning using Infrastructure as Code principles",
-    "Optimized container orchestration improving system reliability by 40%",
-    "Implemented monitoring and logging solutions for proactive issue detection",
-    "Collaborated with development teams to streamline deployment processes",
-    "Reduced deployment errors by 75% through automated testing integration"
-  ];
-
-  return (
-    <section id="experience" className="py-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 relative overflow-hidden">
+  const achievements = ["Designed and implemented CI/CD pipelines reducing deployment time by 60%", "Automated infrastructure provisioning using Infrastructure as Code principles", "Optimized container orchestration improving system reliability by 40%", "Implemented monitoring and logging solutions for proactive issue detection", "Collaborated with development teams to streamline deployment processes", "Reduced deployment errors by 75% through automated testing integration"];
+  return <section id="experience" className="py-24 bg-gradient-to-br from-white via-blue-50 to-cyan-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 opacity-5 animate-pulse">
           <Rocket size={100} className="text-blue-600" />
         </div>
-        <div className="absolute bottom-20 left-20 opacity-5 animate-bounce" style={{ animationDuration: '4s' }}>
+        <div className="absolute bottom-20 left-20 opacity-5 animate-bounce" style={{
+        animationDuration: '4s'
+      }}>
           <Users size={80} className="text-cyan-600" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -44,7 +35,9 @@ const Experience = () => {
           <div className="relative">
             {/* Decorative gradient orbs */}
             <div className="absolute -top-6 -left-6 w-20 h-20 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full opacity-20 animate-pulse"></div>
-            <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute -bottom-6 -right-6 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full opacity-20 animate-pulse" style={{
+            animationDelay: '1s'
+          }}></div>
             
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-10 md:p-16 shadow-2xl border border-slate-200/50">
               <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-12">
@@ -78,7 +71,7 @@ const Experience = () => {
                         <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
                           <MapPin size={20} className="text-green-600" />
                         </div>
-                        <span className="text-lg">Nagpur, Maharashtra</span>
+                        <span className="text-lg">Pune, Maharashtra</span>
                       </div>
                     </div>
                   </div>
@@ -86,14 +79,12 @@ const Experience = () => {
                   <div>
                     <h4 className="text-2xl font-bold text-slate-900 mb-6">Key Responsibilities & Achievements</h4>
                     <div className="grid gap-4">
-                      {achievements.map((achievement, index) => (
-                        <div key={index} className="flex items-start space-x-4 p-4 bg-slate-50/80 rounded-xl backdrop-blur-sm border border-slate-200/50 hover:bg-white/80 transition-all duration-300">
+                      {achievements.map((achievement, index) => <div key={index} className="flex items-start space-x-4 p-4 bg-slate-50/80 rounded-xl backdrop-blur-sm border border-slate-200/50 hover:bg-white/80 transition-all duration-300">
                           <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
                             <CheckCircle className="text-white" size={18} />
                           </div>
                           <p className="text-slate-700 leading-relaxed text-lg">{achievement}</p>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
 
@@ -127,8 +118,6 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Experience;
